@@ -12,10 +12,10 @@ function Navbar() {
         {/* <span>FoodforEveryone</span> */}
       </a>
       <div className="navbar_middle">
-        <NavLink exact to="/" activeClassName="active">
+        {/* <NavLink exact to="/" activeClassName="active">
           Home
         </NavLink>
-        {/* <NavLink to="/quote" activeClassName="active">Quote</NavLink> */}
+        <NavLink to="/quote" activeClassName="active">Quote</NavLink>
         <NavLink to="/restaurants" activeClassName="active">
           Restaurants
         </NavLink>
@@ -24,7 +24,8 @@ function Navbar() {
         </NavLink>
         <NavLink to="/contact" activeClassName="active">
           Contact
-        </NavLink>
+        </NavLink> */}
+        <a href="">Home</a>
       </div>
       <div className="navbar_right">
         <span>Get Started</span>
