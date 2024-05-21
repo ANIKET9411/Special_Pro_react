@@ -19,7 +19,7 @@ async function getlistbasedonSpecifiedcategory(category){
     try{
         let response=await api.get(`/filter.php?c=${category}`);
         console.log(response.data);
-        return response.data.meals;
+        return (response.data.meals);
     }
     catch{
         throw new Error("Something went wrong");

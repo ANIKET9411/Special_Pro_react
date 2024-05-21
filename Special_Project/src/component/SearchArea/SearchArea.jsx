@@ -6,7 +6,6 @@ function SearchArea() {
   const [searchvalue, setSearchvalue] = useState();
   const [searchResult, setSearchresult] = useState([]);
   const navigate = useNavigate();
-  const v2 = useNavigate();
   function searchfood() {
     navigate("/");
     getfoodbysearch(searchvalue)
@@ -15,10 +14,10 @@ function SearchArea() {
       })
       .catch(console.log);
   }
-  function movetodetailspage(id) {
-    v2(`/${id}`);
-    setSearchvalue("");
+  function gotoreceipepage(id) {
+    navigate(`/${id}`);
     setSearchresult([]);
+    renderResult();
   }
   function renderResult() {
     if (searchResult.length === 0) {
@@ -27,7 +26,17 @@ function SearchArea() {
       return searchResult.map((item) => {
         return (
           <div
-            style={{ width: "18%", textAlign: "center", margin: "1%" }}
+            style={{
+              width: "16%",
+              textAlign: "center",
+              margin: "1%",
+              padding: "10px",
+              backgroundColor: "white",
+              color: "black",
+            }}
+            onClick={() => {
+              gotoreceipepage(item.idMeal);
+            }}
             key={item.idMeal}
           >
             <div style={{ width: "100%" }}>
@@ -92,6 +101,7 @@ function SearchArea() {
             margin: "0 10%",
             borderBottom: "10px solid #E16120",
             display: "inline-block",
+            color: "black",
           }}
         >
           Meals

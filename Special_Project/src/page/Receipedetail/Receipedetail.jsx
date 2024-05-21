@@ -10,7 +10,11 @@ function Receipedetail() {
   }, [id]);
   return (
     <>
-      <div>rreceipe page{id}</div>;
+      <div>
+        {console.log(detail)}
+        {detail[0].strCategory}
+      </div>
+      ;
     </>
   );
 }
