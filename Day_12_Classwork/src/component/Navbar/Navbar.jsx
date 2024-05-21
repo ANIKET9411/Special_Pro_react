@@ -12,20 +12,35 @@ function Navbar() {
         {/* <span>FoodforEveryone</span> */}
       </a>
       <div className="navbar_middle">
-        {/* <NavLink exact to="/" activeClassName="active">
-          Home
-        </NavLink>
-        <NavLink to="/quote" activeClassName="active">Quote</NavLink>
-        <NavLink to="/restaurants" activeClassName="active">
-          Restaurants
-        </NavLink>
-        <NavLink to="/foods" activeClassName="active">
-          Foods
-        </NavLink>
-        <NavLink to="/contact" activeClassName="active">
-          Contact
-        </NavLink> */}
-        <a href="">Home</a>
+        <p>
+          <NavLink exact to="/" activeClassName="active">
+            Home
+          </NavLink>
+        </p>
+        <p>
+          <NavLink to="/quote" activeClassName="active">
+            Quote
+          </NavLink>
+        </p>
+        <p>
+          <NavLink to="/restaurants" activeClassName="active">
+            Restaurants
+          </NavLink>
+        </p>
+        <p>
+          <NavLink to="/food" activeClassName="active">
+            Foods
+          </NavLink>
+        </p>
+        <p>
+          <NavLink to="/contact" activeClassName="active">
+            Contact
+          </NavLink>
+        </p>
+
+        {/* <p>
+          <Link to="/">Home</Link>
+        </p> */}
       </div>
       <div className="navbar_right">
         <span>Get Started</span>

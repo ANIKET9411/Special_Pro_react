@@ -20,12 +20,14 @@
 .navbar_middle{
     display: flex;
     justify-content: space-between;
-    width:30%;
+    width:40%;
 }
-.navbar_middle a{
-    text-decoration: none;
-    color:white;
+.navbar_middle p a{
     font-weight: bold;
+    color:white;
+}
+.navbar_middle p a:first-of-type{
+    color: #4b75ce;
 }
 .navbar_right{
     width:20%;
