@@ -31,7 +31,7 @@ async function getlistbasedonSpecifiedcategory(category){
         try{
             let response=await api.get(`/lookup.php?i=${id}`);
             console.log(response.data);
-            return response.data;
+            return response.data.meals[0];
         }
         catch{
             throw new Error("Something went wrong");

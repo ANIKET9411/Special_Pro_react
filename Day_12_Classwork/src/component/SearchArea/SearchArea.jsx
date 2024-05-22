@@ -7,7 +7,7 @@ function SearchArea() {
   const [searchResult, setSearchresult] = useState([]);
   const navigate = useNavigate();
   function searchfood() {
-    navigate("/");
+    navigate("/food");
     getfoodbysearch(searchvalue)
       .then((data) => {
         return <>{setSearchresult(data)}</>;

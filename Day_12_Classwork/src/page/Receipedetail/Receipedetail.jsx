@@ -5,15 +5,17 @@ import { getdetailsthroughid } from "../../api";
 function Receipedetail() {
   const { id } = useParams();
   const [detail, setDetail] = useState();
+  console.log(id + "*");
   useEffect(() => {
+    console.log(id + "&");
     getdetailsthroughid(id).then(setDetail).catch(console.log);
   }, [id]);
   return (
     <>
-      <div>
-        {console.log(detail.meals)}
-        {/* <h1>{detail.meal.strMeal}</h1> */}
-        {/* {detail.idMeal} */}
+      <div onClick={() => {}}>
+        {console.log(detail.idMeal)}
+        <h1>{detail.idMeal}</h1>
+        {id}
       </div>
     </>
   );
